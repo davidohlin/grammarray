@@ -1,6 +1,6 @@
 {
   "name": "grammarray",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Make an array a sentence, or whatever you want.",
   "license": "MIT",
   "repository": "davidohlin/grammarray",
