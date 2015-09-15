@@ -1,0 +1,41 @@
+{
+  "name": "grammarray",
+  "version": "0.0.0",
+  "description": "Make an array a sentence, or whatever you want.",
+  "license": "MIT",
+  "repository": "davidohlin/grammarray",
+  "author": {
+    "name": "David Öhlin",
+    "email": "hello@davidohlin.se",
+    "url": "davidohlin.se"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "pretty",
+    "sentence",
+    "grammar",
+    "array"
+  ],
+  "dependencies": {
+    "object-assign": "^4.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.2.0",
+    "mocha": "^2.2.5",
+    "xo": "^0.7.1"
+  },
+  "xo": {
+    "envs": [
+      "node",
+      "mocha"
+    ]
+  }
+}
