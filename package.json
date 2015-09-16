@@ -29,13 +29,11 @@
   },
   "devDependencies": {
     "ava": "^0.2.0",
-    "mocha": "^2.2.5",
     "xo": "^0.7.1"
   },
   "xo": {
     "envs": [
-      "node",
-      "mocha"
+      "node"
     ]
   }
 }

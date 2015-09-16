@@ -1,7 +1,7 @@
 'use strict';
 var objectAssign = require('object-assign');
 
-module.exports = function (arr, opts) {
+module.exports = function (input, opts) {
 	opts = objectAssign({
 		before: '',
 		delimiter: ', ',
@@ -9,14 +9,12 @@ module.exports = function (arr, opts) {
 		after: ''
 	}, opts);
 
-	var res;
+	var arr = input.slice();
 
 	if (arr.length > 1) {
 		var lastItem = arr.pop();
-		res = opts.before + arr.join(opts.delimiter) + ' ' + opts.lastDelimiter + ' ' + lastItem + opts.after;
-		return res;
+		return opts.before + arr.join(opts.delimiter) + ' ' + opts.lastDelimiter + ' ' + lastItem + opts.after;
 	}
 
-	res = opts.before + arr + opts.after;
-	return res;
+	return opts.before + arr + opts.after;
 };
