@@ -5,7 +5,7 @@ module.exports = function (input, opts) {
 	opts = objectAssign({
 		before: '',
 		delimiter: ', ',
-		lastDelimiter: 'and',
+		lastDelimiter: ' and ',
 		after: ''
 	}, opts);
 
@@ -13,7 +13,7 @@ module.exports = function (input, opts) {
 
 	if (arr.length > 1) {
 		var lastItem = arr.pop();
-		return opts.before + arr.join(opts.delimiter) + ' ' + opts.lastDelimiter + ' ' + lastItem + opts.after;
+		return opts.before + arr.join(opts.delimiter) + opts.lastDelimiter + lastItem + opts.after;
 	}
 
 	return opts.before + arr + opts.after;
