@@ -1,17 +1,15 @@
-'use strict';
-var grammarray = require('./');
-var test = require('ava');
+import test from 'ava';
+import m from './';
 
-var arr = ['Marvin Gaye', 'Led Zeppelin', 'Biggie'];
+const arr = ['Marvin Gaye', 'Led Zeppelin', 'Biggie'];
 
-test(function (t) {
-	t.same(grammarray(arr), 'Marvin Gaye, Led Zeppelin and Biggie');
-	t.same(grammarray(arr, {
+test(t => {
+	t.is(typeof m(arr), 'string');
+	t.is(m(arr), 'Marvin Gaye, Led Zeppelin and Biggie');
+	t.is(m(arr, {
 		before: '~~ ',
 		delimiter: ' and ',
 		lastDelimiter: ' but also ',
 		after: ' ~~'
 	}), '~~ Marvin Gaye and Led Zeppelin but also Biggie ~~');
-	t.is(typeof grammarray(arr), 'string');
-	t.end();
 });
