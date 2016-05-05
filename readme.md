@@ -13,9 +13,8 @@ $ npm install --save grammarray
 ## Usage
 
 ```js
-var grammarray = require('grammarray');
-
-var arr = ['Marvin Gaye', 'Led Zeppelin', 'Bigge'];
+const grammarray = require('grammarray');
+const arr = ['Marvin Gaye', 'Led Zeppelin', 'Bigge'];
 
 grammarray(arr);
 //=> 'Marvin Gaye, Led Zeppelin and Biggie'
